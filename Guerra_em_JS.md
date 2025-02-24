@@ -121,3 +121,76 @@ do {
 ```
 🔹 **Exemplo no dia a dia:** Você precisa **lavar a louça pelo menos uma vez** antes de sair para a batalha.  
 
+## **6. Condicionais - As Decisões do General**
+Na guerra, um general toma decisões estratégicas com base na situação do campo de batalha. Em programação, usamos condicionais (if, else if, else) para definir ações baseadas em condições específicas.
+
+🔹 Comparação com a guerra:<br>
+📌 Se um soldado está sem munição, ele precisa recarregar.<br>
+📌 Se o inimigo está perto, ele ataca.<br>
+📌 Caso contrário, ele mantém a posição.<br>
+
+### **6.1 `if` - Tomando Decisões**
+```javascript
+let munição = 0;
+
+if (munição === 0) {
+    console.log("Soldado recarregando!");
+}
+```
+📝 Explicação: O soldado verifica se tem munição. Se estiver sem munição (0), ele recarrega.
+
+
+### **6.2 `if`...`else` - Escolhendo a Melhor Ação**
+```javascript
+let inimigoPerto = true;
+
+if (inimigoPerto) {
+    console.log("Atacar o inimigo!");
+} else {
+    console.log("Manter posição.");
+}
+```
+🔹 Exemplo no dia a dia: Se o soldado encontra o inimigo, ele ataca. Caso contrário, ele fica atento e espera.
+
+### **6.3 `else if` - Avaliando Múltiplas Situações**
+Às vezes, um general precisa considerar mais de duas opções antes de tomar uma decisão.
+```javascript
+let vida = 30;
+
+if (vida > 70) {
+    console.log("Avançar para o ataque!");
+} else if (vida > 30) {
+    console.log("Lutar com cautela!");
+} else {
+    console.log("Recuar e se curar!");
+}
+```
+📌 Conclusão: O soldado ataca se estiver forte, luta defensivamente se estiver ferido, mas recua se estiver muito fraco.
+
+## 7. Funções - As Estratégias do General
+Um general cria estratégias que os soldados podem seguir repetidamente sem que ele precise dar as ordens manualmente todas as vezes. Em programação, usamos funções para agrupar comandos reutilizáveis.
+
+### 7.1 Criando uma Função
+📌 O general define uma estratégia de ataque, e qualquer soldado pode segui-la.
+```javascript
+function atacar() {
+    console.log("Soldado atacando!");
+}
+
+// Chamando a função
+atacar();  // "Soldado atacando!"
+atacar();  // "Soldado atacando!"
+```
+📝 Explicação: O general define um plano de ataque (function atacar()) e pode chamá-lo quantas vezes precisar.
+
+### 7.2 Funções com Parâmetros - Ordens Personalizadas
+📌 O general pode querer que diferentes soldados usem diferentes armas ao atacar.
+```javascript
+function atacarComArma(arma) {
+    console.log("Soldado atacando com " + arma + "!");
+}
+
+atacarComArma("espada");  // "Soldado atacando com espada!"
+atacarComArma("arco");    // "Soldado atacando com arco!"
+```
+📝 Explicação: A função recebe um parâmetro (arma), permitindo que o soldado escolha qual usar.
