@@ -124,13 +124,105 @@ let pessoa = { nome: "Carlos", idade: 30 };  // Objeto
 
 ---
 ## 6. Estruturas condicionais
+Muitas vezes, queremos que o programa tome decisões baseadas em certas condições. Para isso, usamos estruturas condicionais, que permitem executar diferentes blocos de código dependendo das situações.
 
+### **6.1 A Estrutura `if` - Se Isso For Verdade**
+A palavra-chave if é usada para executar um bloco de código apenas se uma condição for verdadeira.
+```javascript
+let idade = 18;
+
+if (idade >= 18) {
+    console.log("Você é maior de idade.");
+}
+```
+🔹 Exemplo no dia a dia:
+
+- Se estiver chovendo, pegue um guarda-chuva.
+
+- Se o semáforo estiver vermelho, pare o carro.
+
+### **6.2 A Estrutura `if`...`else` - Senão, Faça Outra Coisa**
+Se quisermos executar uma ação quando a condição é verdadeira e outra quando é falsa, usamos if...else.
+```javascript
+let idade = 16;
+
+if (idade >= 18) {
+    console.log("Você é maior de idade.");
+} else {
+    console.log("Você é menor de idade.");
+}
+```
+🔹 Exemplo no dia a dia:
+
+- Se houver ingressos disponíveis, compre um; senão, espere a próxima sessão.
+
+### **6.3 A Estrutura `if`...`else` `if`...`else` - Múltiplas Condições**
+Quando há mais de duas possibilidades, podemos usar else if para verificar outras condições antes de chegar ao else.
+```javascript
+let nota = 85;
+
+if (nota >= 90) {
+    console.log("Nota A");
+} else if (nota >= 80) {
+    console.log("Nota B");
+} else if (nota >= 70) {
+    console.log("Nota C");
+} else {
+    console.log("Reprovado");
+}
+```
+
+🔹 Exemplo no dia a dia:
+
+- Se a temperatura estiver acima de 30°C, use roupas leves.
+
+- Senão, se estiver entre 20°C e 30°C, use roupas confortáveis.
+
+- Senão, se estiver abaixo de 20°C, vista um casaco.
+
+### **6.4 O Comando `switch` - Quando Há Muitas Opções**
+Quando temos muitas condições a serem verificadas, o switch é uma alternativa ao if...else if...else, tornando o código mais organizado.
+```javascript
+let dia = 3;
+
+switch (dia) {
+    case 1:
+        console.log("Domingo");
+        break;
+    case 2:
+        console.log("Segunda-feira");
+        break;
+    case 3:
+        console.log("Terça-feira");
+        break;
+    case 4:
+        console.log("Quarta-feira");
+        break;
+    case 5:
+        console.log("Quinta-feira");
+        break;
+    case 6:
+        console.log("Sexta-feira");
+        break;
+    case 7:
+        console.log("Sábado");
+        break;
+    default:
+        console.log("Dia inválido");
+}
+```
+
+🔹 Exemplo no dia a dia:
+
+- Em um menu de restaurante, escolhemos entre pizza, hambúrguer, sushi, salada, etc.
+
+- O garçom traz a opção correspondente ao que escolhemos.
 ---
 
-## 6. Estruturas de Repetição 
+## 7. Estruturas de Repetição 
 Às vezes, queremos repetir uma ação várias vezes sem escrever o mesmo código repetidamente. Para isso, usamos os **laços de repetição**.
 
-### **6.1 Laço `for` - Quando Sabemos Quantas Vezes Repetir**
+### **7.1 Laço `for` - Quando Sabemos Quantas Vezes Repetir**
 ```javascript
 for (let i = 1; i <= 5; i++) {
     console.log("Execução número " + i);
@@ -140,7 +232,7 @@ for (let i = 1; i <= 5; i++) {
 
 ---
 
-### **6.2 Laço `while` - Quando Não Sabemos o Número Exato de Repetições**
+### **7.2 Laço `while` - Quando Não Sabemos o Número Exato de Repetições**
 ```javascript
 let contador = 1;
 while (contador <= 5) {
@@ -152,7 +244,7 @@ while (contador <= 5) {
 
 ---
 
-### **6.3 Laço `do...while` - Quando Precisamos Executar Pelo Menos Uma Vez**
+### **7.3 Laço `do...while` - Quando Precisamos Executar Pelo Menos Uma Vez**
 ```javascript
 let saldo = 10;
 do {
@@ -163,6 +255,52 @@ do {
 🔹 **Exemplo no dia a dia:** Lavar as mãos pelo menos uma vez antes de comer, mesmo que elas pareçam limpas.
 
 ---
+
+## 8. Funções - Reutilizando Código
+Uma função é um bloco de código que executa uma tarefa específica. Em vez de repetir o mesmo código várias vezes, podemos criar uma função e chamá-la sempre que precisarmos.
+
+### **8.1 Criando e Chamando Funções**
+Para definir uma função em JavaScript, usamos a palavra-chave `function`:
+```javascript
+function saudacao() {
+    console.log("Olá, bem-vindo ao nosso sistema!");
+}
+
+// Chamando a função
+saudacao();
+```
+🔹 Exemplo no dia a dia:
+
+- Em um restaurante, sempre que um cliente chega, o garçom pode dizer "Bem-vindo!" automaticamente.
+
+### **8.2 Funções com Parâmetros**
+Podemos passar valores para uma função para que ela possa trabalhar com diferentes dados.
+```javascript
+function cumprimentar(nome) {
+    console.log("Olá, " + nome + "!");
+}
+
+// Chamando a função com diferentes valores
+cumprimentar("Ana");
+cumprimentar("Carlos");
+```
+🔹 Exemplo no dia a dia:
+
+- O garçom pode dizer "Bem-vindo, Ana!" ou "Bem-vindo, Carlos!", dependendo do nome do cliente.
+
+### **8.3 Funções com Retorno de Valor**
+As funções podem retornar um valor para ser usado depois.
+```javascript
+function somar(a, b) {
+    return a + b;
+}
+
+let resultado = somar(5, 3);
+console.log("Resultado:", resultado);
+```
+🔹 Exemplo no dia a dia:
+
+- Uma máquina de cálculo recebe dois números e retorna a soma deles.
 
 ## Exercícios extras
 ### 1. **Variáveis e Impressão no Console**  
