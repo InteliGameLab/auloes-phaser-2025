@@ -461,7 +461,151 @@ A palavra "banana" tem 3 vogais.
 
 ---
 
-### **Desafio Bônus - Fibonacci**  
+### **11. Comparação de Dois Números**
+
+**Enunciado:**
+- Peça dois números inteiros ao usuário.
+- Exiba qual é o maior número ou se eles são iguais.
+
+**Exemplo esperado de saída:**  
+```
+Digite o primeiro número: 8
+Digite o segundo número: 12
+O maior número é 12.
+```
+
+---
+
+### **12. Verificação de Idade para Maioridade**
+
+**Enunciado:**
+- Peça a idade de uma pessoa ao usuário.
+- Exiba se a pessoa é maior de idade (18 anos ou mais) ou menor de idade.
+
+**Exemplo esperado de saída:**  
+```
+Digite sua idade: 20
+Você é maior de idade.
+```
+
+---
+
+### **13. Cálculo de Desconto em Compras**
+
+**Enunciado:**
+- Peça o valor total da compra ao usuário.
+- Se o valor for maior ou igual a R$100, aplique um desconto de 10%.
+- Caso contrário, não aplique desconto.
+- Exiba o valor final a ser pago.
+
+**Exemplo esperado de saída:**  
+```
+Valor da compra: R$120
+Desconto de 10% aplicado.
+Valor final: R$108.
+```
+
+---
+
+### **14. Cálculo de IMC (Índice de Massa Corporal)**
+
+**Enunciado:**
+- Peça o peso (kg) e a altura (m) do usuário.
+- Calcule o IMC usando a fórmula: `IMC = peso / (altura * altura)`.
+- Classifique o IMC de acordo com a tabela:
+    - Menor que 18.5: "Abaixo do peso"
+    - Entre 18.5 e 24.9: "Peso normal"
+    - Entre 25 e 29.9: "Sobrepeso"
+    - 30 ou mais: "Obesidade"
+
+**Exemplo esperado de saída:**  
+```
+Digite seu peso (kg): 70
+Digite sua altura (m): 1.75
+Seu IMC é 22.86 - Classificação: Peso normal.
+```
+
+---
+
+### **15. Função de Saudação**
+
+Enunciado:
+- Crie uma função chamada `saudacao(nome)`.
+- Ela deve receber um nome como parâmetro e retornar uma saudação personalizada.
+
+**Exemplo esperado de saída:**  
+```
+saudacao("João");
+// Retorna: "Olá, João! Seja bem-vindo!"
+```
+
+---
+
+### **16. Função de Cálculo de Média**
+
+Enunciado:
+- Crie uma função chamada `calcularMedia(n1, n2, n3)`.
+- A função deve receber três notas e retornar a média aritmética.
+- Caso a média seja maior ou igual a 7, retorne "Aprovado", senão, "Reprovado".
+
+**Exemplo esperado de saída:**  
+```
+calcularMedia(8, 7, 6);
+// Retorna: "Reprovado"
+```
+
+---
+
+### **17. Função para Verificar Número Par ou Ímpar**
+
+Enunciado:
+- Crie uma função chamada `ehPar(numero)`.
+- A função deve retornar true se o número for par, e false se for ímpar.
+
+**Exemplo esperado de saída:**  
+```
+ehPar(4); // Retorna: true
+ehPar(7); // Retorna: false
+```
+
+---
+
+### **18. Função para Gerar Tabuada**
+
+Enunciado:
+- Crie uma função chamada `tabuada(numero)`.
+- Ela deve exibir no console a tabuada do número de 1 a 10.
+
+**Exemplo esperado de saída:**  
+```
+tabuada(5);
+// Saída esperada no console:
+// 5 x 1 = 5
+// 5 x 2 = 10
+// ...
+// 5 x 10 = 50
+```
+
+---
+
+### **19. Função para Converter Temperatura**
+
+Enunciado:
+- Crie uma função chamada `celsiusParaFahrenheit(celsius)`.
+- Ela deve converter uma temperatura de Celsius para Fahrenheit usando a fórmula: `F = (C × 9/5) + 32.`
+
+**Exemplo esperado de saída:**  
+```
+tabuada(5);
+// Saída esperada no console:
+// 5 x 1 = 5
+// 5 x 2 = 10
+// ...
+// 5 x 10 = 50
+```
+---
+
+### **Desafio Bônus 1 - Fibonacci**  
 **Fibonacci** é uma sequência onde **cada número é a soma dos dois anteriores**:  
 `0, 1, 1, 2, 3, 5, 8, 13, ...`  
 
@@ -475,3 +619,31 @@ Digite um número: 6
 Sequência de Fibonacci: 0, 1, 1, 2, 3, 5
 ```
 **Dica:** Use **variáveis para armazenar os dois últimos números da sequência** e um **laço `for`** para calcular os próximos.
+
+### **Desafio Bônus 2 - Números Perfeitos**
+Um número perfeito é aquele cuja soma de seus divisores próprios (excluindo ele mesmo) é igual ao próprio número.
+
+Enunciado:
+- Peça um número inteiro positivo `N` ao usuário.
+- Verifique se `N` é um número perfeito.
+- Exiba `"O número X é perfeito!"` ou `"O número X não é perfeito!"`.
+
+**Exemplo esperado de saída:**  
+```
+Digite um número: 6
+O número 6 é perfeito!
+```
+
+### **Desafio Bônus 3 - Número Armstrong**
+Um número **Armstrong** (ou número de Narayana Pandita) é um número que é igual à soma de seus dígitos elevados à potência do número de dígitos.
+
+Enunciado:
+- Crie uma função chamada `ehArmstrong(numero)`.
+- A função deve retornar `true` se o número for um número Armstrong e `false` caso contrário.
+- O programa deve pedir um número ao usuário e exibir o resultado no console.
+
+**Exemplo esperado de saída:**  
+```
+ehArmstrong(153); // Retorna: true
+ehArmstrong(9475); // Retorna: false
+```
