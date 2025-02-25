@@ -124,13 +124,105 @@ let pessoa = { nome: "Carlos", idade: 30 };  // Objeto
 
 ---
 ## 6. Estruturas condicionais
+Muitas vezes, queremos que o programa tome decisões baseadas em certas condições. Para isso, usamos estruturas condicionais, que permitem executar diferentes blocos de código dependendo das situações.
 
+### **6.1 A Estrutura `if` - Se Isso For Verdade**
+A palavra-chave if é usada para executar um bloco de código apenas se uma condição for verdadeira.
+```javascript
+let idade = 18;
+
+if (idade >= 18) {
+    console.log("Você é maior de idade.");
+}
+```
+🔹 Exemplo no dia a dia:
+
+- Se estiver chovendo, pegue um guarda-chuva.
+
+- Se o semáforo estiver vermelho, pare o carro.
+
+### **6.2 A Estrutura `if`...`else` - Senão, Faça Outra Coisa**
+Se quisermos executar uma ação quando a condição é verdadeira e outra quando é falsa, usamos if...else.
+```javascript
+let idade = 16;
+
+if (idade >= 18) {
+    console.log("Você é maior de idade.");
+} else {
+    console.log("Você é menor de idade.");
+}
+```
+🔹 Exemplo no dia a dia:
+
+- Se houver ingressos disponíveis, compre um; senão, espere a próxima sessão.
+
+### **6.3 A Estrutura `if`...`else` `if`...`else` - Múltiplas Condições**
+Quando há mais de duas possibilidades, podemos usar else if para verificar outras condições antes de chegar ao else.
+```javascript
+let nota = 85;
+
+if (nota >= 90) {
+    console.log("Nota A");
+} else if (nota >= 80) {
+    console.log("Nota B");
+} else if (nota >= 70) {
+    console.log("Nota C");
+} else {
+    console.log("Reprovado");
+}
+```
+
+🔹 Exemplo no dia a dia:
+
+- Se a temperatura estiver acima de 30°C, use roupas leves.
+
+- Senão, se estiver entre 20°C e 30°C, use roupas confortáveis.
+
+- Senão, se estiver abaixo de 20°C, vista um casaco.
+
+### **6.4 O Comando `switch` - Quando Há Muitas Opções**
+Quando temos muitas condições a serem verificadas, o switch é uma alternativa ao if...else if...else, tornando o código mais organizado.
+```javascript
+let dia = 3;
+
+switch (dia) {
+    case 1:
+        console.log("Domingo");
+        break;
+    case 2:
+        console.log("Segunda-feira");
+        break;
+    case 3:
+        console.log("Terça-feira");
+        break;
+    case 4:
+        console.log("Quarta-feira");
+        break;
+    case 5:
+        console.log("Quinta-feira");
+        break;
+    case 6:
+        console.log("Sexta-feira");
+        break;
+    case 7:
+        console.log("Sábado");
+        break;
+    default:
+        console.log("Dia inválido");
+}
+```
+
+🔹 Exemplo no dia a dia:
+
+- Em um menu de restaurante, escolhemos entre pizza, hambúrguer, sushi, salada, etc.
+
+- O garçom traz a opção correspondente ao que escolhemos.
 ---
 
-## 6. Estruturas de Repetição 
+## 7. Estruturas de Repetição 
 Às vezes, queremos repetir uma ação várias vezes sem escrever o mesmo código repetidamente. Para isso, usamos os **laços de repetição**.
 
-### **6.1 Laço `for` - Quando Sabemos Quantas Vezes Repetir**
+### **7.1 Laço `for` - Quando Sabemos Quantas Vezes Repetir**
 ```javascript
 for (let i = 1; i <= 5; i++) {
     console.log("Execução número " + i);
@@ -140,7 +232,7 @@ for (let i = 1; i <= 5; i++) {
 
 ---
 
-### **6.2 Laço `while` - Quando Não Sabemos o Número Exato de Repetições**
+### **7.2 Laço `while` - Quando Não Sabemos o Número Exato de Repetições**
 ```javascript
 let contador = 1;
 while (contador <= 5) {
@@ -152,7 +244,7 @@ while (contador <= 5) {
 
 ---
 
-### **6.3 Laço `do...while` - Quando Precisamos Executar Pelo Menos Uma Vez**
+### **7.3 Laço `do...while` - Quando Precisamos Executar Pelo Menos Uma Vez**
 ```javascript
 let saldo = 10;
 do {
@@ -163,6 +255,52 @@ do {
 🔹 **Exemplo no dia a dia:** Lavar as mãos pelo menos uma vez antes de comer, mesmo que elas pareçam limpas.
 
 ---
+
+## 8. Funções - Reutilizando Código
+Uma função é um bloco de código que executa uma tarefa específica. Em vez de repetir o mesmo código várias vezes, podemos criar uma função e chamá-la sempre que precisarmos.
+
+### **8.1 Criando e Chamando Funções**
+Para definir uma função em JavaScript, usamos a palavra-chave `function`:
+```javascript
+function saudacao() {
+    console.log("Olá, bem-vindo ao nosso sistema!");
+}
+
+// Chamando a função
+saudacao();
+```
+🔹 Exemplo no dia a dia:
+
+- Em um restaurante, sempre que um cliente chega, o garçom pode dizer "Bem-vindo!" automaticamente.
+
+### **8.2 Funções com Parâmetros**
+Podemos passar valores para uma função para que ela possa trabalhar com diferentes dados.
+```javascript
+function cumprimentar(nome) {
+    console.log("Olá, " + nome + "!");
+}
+
+// Chamando a função com diferentes valores
+cumprimentar("Ana");
+cumprimentar("Carlos");
+```
+🔹 Exemplo no dia a dia:
+
+- O garçom pode dizer "Bem-vindo, Ana!" ou "Bem-vindo, Carlos!", dependendo do nome do cliente.
+
+### **8.3 Funções com Retorno de Valor**
+As funções podem retornar um valor para ser usado depois.
+```javascript
+function somar(a, b) {
+    return a + b;
+}
+
+let resultado = somar(5, 3);
+console.log("Resultado:", resultado);
+```
+🔹 Exemplo no dia a dia:
+
+- Uma máquina de cálculo recebe dois números e retorna a soma deles.
 
 ## Exercícios extras
 ### 1. **Variáveis e Impressão no Console**  
@@ -323,7 +461,151 @@ A palavra "banana" tem 3 vogais.
 
 ---
 
-### **Desafio Bônus - Fibonacci**  
+### **11. Comparação de Dois Números**
+
+**Enunciado:**
+- Peça dois números inteiros ao usuário.
+- Exiba qual é o maior número ou se eles são iguais.
+
+**Exemplo esperado de saída:**  
+```
+Digite o primeiro número: 8
+Digite o segundo número: 12
+O maior número é 12.
+```
+
+---
+
+### **12. Verificação de Idade para Maioridade**
+
+**Enunciado:**
+- Peça a idade de uma pessoa ao usuário.
+- Exiba se a pessoa é maior de idade (18 anos ou mais) ou menor de idade.
+
+**Exemplo esperado de saída:**  
+```
+Digite sua idade: 20
+Você é maior de idade.
+```
+
+---
+
+### **13. Cálculo de Desconto em Compras**
+
+**Enunciado:**
+- Peça o valor total da compra ao usuário.
+- Se o valor for maior ou igual a R$100, aplique um desconto de 10%.
+- Caso contrário, não aplique desconto.
+- Exiba o valor final a ser pago.
+
+**Exemplo esperado de saída:**  
+```
+Valor da compra: R$120
+Desconto de 10% aplicado.
+Valor final: R$108.
+```
+
+---
+
+### **14. Cálculo de IMC (Índice de Massa Corporal)**
+
+**Enunciado:**
+- Peça o peso (kg) e a altura (m) do usuário.
+- Calcule o IMC usando a fórmula: `IMC = peso / (altura * altura)`.
+- Classifique o IMC de acordo com a tabela:
+    - Menor que 18.5: "Abaixo do peso"
+    - Entre 18.5 e 24.9: "Peso normal"
+    - Entre 25 e 29.9: "Sobrepeso"
+    - 30 ou mais: "Obesidade"
+
+**Exemplo esperado de saída:**  
+```
+Digite seu peso (kg): 70
+Digite sua altura (m): 1.75
+Seu IMC é 22.86 - Classificação: Peso normal.
+```
+
+---
+
+### **15. Função de Saudação**
+
+Enunciado:
+- Crie uma função chamada `saudacao(nome)`.
+- Ela deve receber um nome como parâmetro e retornar uma saudação personalizada.
+
+**Exemplo esperado de saída:**  
+```
+saudacao("João");
+// Retorna: "Olá, João! Seja bem-vindo!"
+```
+
+---
+
+### **16. Função de Cálculo de Média**
+
+Enunciado:
+- Crie uma função chamada `calcularMedia(n1, n2, n3)`.
+- A função deve receber três notas e retornar a média aritmética.
+- Caso a média seja maior ou igual a 7, retorne "Aprovado", senão, "Reprovado".
+
+**Exemplo esperado de saída:**  
+```
+calcularMedia(8, 7, 6);
+// Retorna: "Reprovado"
+```
+
+---
+
+### **17. Função para Verificar Número Par ou Ímpar**
+
+Enunciado:
+- Crie uma função chamada `ehPar(numero)`.
+- A função deve retornar true se o número for par, e false se for ímpar.
+
+**Exemplo esperado de saída:**  
+```
+ehPar(4); // Retorna: true
+ehPar(7); // Retorna: false
+```
+
+---
+
+### **18. Função para Gerar Tabuada**
+
+Enunciado:
+- Crie uma função chamada `tabuada(numero)`.
+- Ela deve exibir no console a tabuada do número de 1 a 10.
+
+**Exemplo esperado de saída:**  
+```
+tabuada(5);
+// Saída esperada no console:
+// 5 x 1 = 5
+// 5 x 2 = 10
+// ...
+// 5 x 10 = 50
+```
+
+---
+
+### **19. Função para Converter Temperatura**
+
+Enunciado:
+- Crie uma função chamada `celsiusParaFahrenheit(celsius)`.
+- Ela deve converter uma temperatura de Celsius para Fahrenheit usando a fórmula: `F = (C × 9/5) + 32.`
+
+**Exemplo esperado de saída:**  
+```
+tabuada(5);
+// Saída esperada no console:
+// 5 x 1 = 5
+// 5 x 2 = 10
+// ...
+// 5 x 10 = 50
+```
+---
+
+### **Desafio Bônus 1 - Fibonacci**  
 **Fibonacci** é uma sequência onde **cada número é a soma dos dois anteriores**:  
 `0, 1, 1, 2, 3, 5, 8, 13, ...`  
 
@@ -337,3 +619,31 @@ Digite um número: 6
 Sequência de Fibonacci: 0, 1, 1, 2, 3, 5
 ```
 **Dica:** Use **variáveis para armazenar os dois últimos números da sequência** e um **laço `for`** para calcular os próximos.
+
+### **Desafio Bônus 2 - Números Perfeitos**
+Um número perfeito é aquele cuja soma de seus divisores próprios (excluindo ele mesmo) é igual ao próprio número.
+
+Enunciado:
+- Peça um número inteiro positivo `N` ao usuário.
+- Verifique se `N` é um número perfeito.
+- Exiba `"O número X é perfeito!"` ou `"O número X não é perfeito!"`.
+
+**Exemplo esperado de saída:**  
+```
+Digite um número: 6
+O número 6 é perfeito!
+```
+
+### **Desafio Bônus 3 - Número Armstrong**
+Um número **Armstrong** (ou número de Narayana Pandita) é um número que é igual à soma de seus dígitos elevados à potência do número de dígitos.
+
+Enunciado:
+- Crie uma função chamada `ehArmstrong(numero)`.
+- A função deve retornar `true` se o número for um número Armstrong e `false` caso contrário.
+- O programa deve pedir um número ao usuário e exibir o resultado no console.
+
+**Exemplo esperado de saída:**  
+```
+ehArmstrong(153); // Retorna: true
+ehArmstrong(9475); // Retorna: false
+```

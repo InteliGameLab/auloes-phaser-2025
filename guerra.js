@@ -42,23 +42,56 @@ while (soldado3_municao > 0) {
 
 console.log(soldado3_nome + " completou o treinamento com sucesso!\n");
 
+//Essa forma acima mostra uma maneira de criar soldados, porém o general gostaria de algo mais eficiente portanto criou a seguinte função
+
+function atirar(nome, arma, municao) {
+    console.log(nome + " pegou sua " + arma + " e começou a atirar!");
+
+    while (municao > 0) {
+        console.log(nome + " dispara sua " + arma + "! Munição restante: " + (municao - 1));
+        municao--;
+    }
+
+    console.log(nome + " completou o treinamento com sucesso!\n");
+}
+
+// Utilizando as funções  o sargento cria os soldados dessa forma 
+atirar("João", "Espada", 5);
+atirar("Maria", "Arco e Flecha", 5);
+atirar("Pedro", "Lança", 5);
 
 // Destruir Prédio 
 
 let predio = 1000; 
 
-for (let i = 0; i < 500; i+= 100){
-    console.log(soldado1_nome + " Causou dano 10 no prédio")
-    predio -= 100;
+for (let i = 0; i < 500; i += 100) {
+    if (predio > 0) {
+        console.log(soldado1_nome + " Causou dano 100 no prédio");
+        predio -= 100;
+
+        if (predio <= 500 && predio > 0) {
+            console.log("⚠️ O prédio está danificado, mas ainda de pé!");
+        } else if (predio <= 0) {
+            console.log("💥 O prédio desmoronou com o ataque de " + soldado1_nome + "!");
+            predio = 0; // Garante que não fique negativo
+        }
+    }
 }
 
-console.log("Dano Final: " +predio);
+console.log("Dano Final: " + predio);
 
 let predio_while = 1000;
 
-while (predio_while != 0){
-     predio_while -= 100;
-     console.log(soldado2_nome + " Causou dano 100 no prédio");
+while (predio_while > 0) {
+    predio_while -= 100;
+    console.log(soldado2_nome + " Causou dano 100 no prédio");
+
+    if (predio_while <= 500 && predio_while > 0) {
+        console.log("⚠️ O prédio está quase caindo!");
+    } else if (predio_while <= 0) {
+        console.log("💥 O prédio desabou após o ataque de " + soldado2_nome + "!");
+        predio_while = 0;
+    }
 }
 
 console.log("Dano Final: " + predio_while);
