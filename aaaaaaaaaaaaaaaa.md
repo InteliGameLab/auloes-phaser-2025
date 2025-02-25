@@ -2,6 +2,41 @@
 ## X.X Mecânica de colisão
     
 Dento do Phaser existem alguns tipos de colisão, sendo eles: O Colider e o Overlap
+
+### O que é Colisão em um Jogo?  
+
+Colisão em um jogo é o evento que ocorre quando dois ou mais objetos dentro do ambiente virtual se tocam ou se sobrepõem. Esse conceito é fundamental em jogos digitais, pois define como os elementos interagem entre si, como personagens, inimigos, itens coletáveis e cenários.
+
+### **Tipos de Colisão**
+Existem diferentes formas de tratar colisões em jogos, dependendo da mecânica desejada:
+
+1. **Colisão Física (Realista)**  
+   - Usa motores de física para calcular impactos, força e direção após a colisão.  
+   - Exemplo: Em um jogo de sinuca, quando uma bola bate em outra e muda sua trajetória.  
+
+2. **Colisão Simples (Arcade)**  
+   - Apenas impede que objetos atravessem uns aos outros, sem simular física realista.  
+   - Exemplo: Um personagem que não pode atravessar paredes em um jogo de plataforma.  
+
+3. **Sobreposição (Overlap)**  
+   - Detecta se dois objetos estão no mesmo espaço, mas sem impedir a passagem.  
+   - Exemplo: Coletar uma moeda sem que o personagem precise colidir fisicamente com ela.  
+
+---
+
+### **Como a Colisão é Detectada?**
+Os jogos usam diferentes técnicas para identificar colisões, como:
+
+- **Hitbox**: Área invisível ao redor do objeto que define quando a colisão ocorre. Pode ser um retângulo, círculo ou formato mais complexo.  
+- **Pixel Perfect**: Verifica se os pixels de dois objetos realmente se sobrepõem. É mais preciso, mas consome mais recursos.  
+- **Sistemas de Física**: Motores como *Box2D* e *Matter.js* simulam colisões realistas usando cálculos de massa, velocidade e força.  
+
+---
+
+### **Exemplos de Colisão em Jogos**
+- **Jogos de plataforma**: Um personagem colide com o chão e não atravessa ele.  
+- **Jogos de corrida**: Carros colidem uns com os outros e são empurrados.  
+- **Jogos de tiro**: Balas colidem com inimigos e causam dano.  
     
 ## X.X.1 **Colider**:
 
