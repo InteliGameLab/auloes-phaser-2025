@@ -1,5 +1,5 @@
 
-## X.X Mecânica de colisão
+## Mecânica de colisão
     
 Dento do Phaser existem alguns tipos de colisão, sendo eles: O Colider e o Overlap
 
@@ -38,7 +38,7 @@ Os jogos usam diferentes técnicas para identificar colisões, como:
 - **Jogos de corrida**: Carros colidem uns com os outros e são empurrados.  
 - **Jogos de tiro**: Balas colidem com inimigos e causam dano.  
     
-## X.X.1 **Colider**:
+## **Colider**:
 
 O **Collider** verifica as *hitboxes* dos dois objetos mencionados na função e impede que eles ocupem o mesmo espaço. No entanto, em alguns casos, seu uso pode não ser recomendado, pois a colisão pode fazer com que os objetos troquem **inércia**, o que pode gerar interações indesejadas.  
 
@@ -119,7 +119,7 @@ O **Collider** é útil em diversos cenários, como:
   this.physics.add.overlap(player, door, enterDoor, null, this);
   ```
 
-## X.X.2 **Overlap:**
+## **Overlap:**
 Diferente do **Collider**, que impede a sobreposição de objetos, o **overlap** apenas detecta quando dois objetos se encontram, sem aplicar nenhuma física sobre eles. Isso é útil quando queremos que um objeto reaja ao contato sem bloqueá-lo.  
 A função Overlap, possue algumas entradas
 
@@ -201,7 +201,7 @@ function destroyBullet(bullet, wall) {
 
 ---
 
-## X.X.4 **Explicação do `this`**
+## **Explicação do `this`**
 No Phaser, a palavra-chave **`this`** é usada para se referir ao contexto atual da cena. Isso é importante porque cada cena do jogo é uma classe que contém seus próprios métodos e propriedades.
 
 Quando usamos `this` dentro de uma função, estamos acessando elementos da cena, como os objetos do jogo, grupos de física, animações e sons.
