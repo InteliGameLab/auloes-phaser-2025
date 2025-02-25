@@ -12,7 +12,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'My Site',
   tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/gamelab.png',
 
   // Set the production url of your site here
   url: 'https://your-docusaurus-site.example.com',
@@ -66,7 +66,7 @@ const config = {
         title: 'Aulões de Phaser',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/gamelab.png',
         },
         items: [
           {
@@ -79,15 +79,6 @@ const config = {
       footer: {
         style: 'dark',
         links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Começando',
-                to: '/',
-              },
-            ],
-          },
           {
             title: 'Community',
             items: [
@@ -115,7 +106,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Inteli Gamelab. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
