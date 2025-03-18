@@ -1,15 +1,16 @@
 ---
-title: ex1
+title: Exercício 1
 slug: ex1
 sidebar_position: 2
 ---
 
 # Exercício
-&emsp;Caso já esteja confiante com esse assunto, resolva esse exercício da prova do ano passado. A resposta está ao fim da página.
-
 ![Exercicio](/img/Aula2/ex1.png)
 
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+# Resposta
+
 Resposta: I, III e IV.
 O gabarito faz referência ao conteúdo da revisão de classes, principalmente à classe Gato
 I está correto, já que o constructor é um método (função da classe) que roda ao inicializar o objeto.  
